@@ -10,8 +10,8 @@ __pycache__/
 # Ignore .vscode folder
 .vscode/
 
-# Ignore Introdution folder
-Introdution/
+# Ignore Introduction folder
+Introduction/
 
 # Ignore Exercises folder
 Exercises/
