@@ -17,4 +17,3 @@ HEADERS = {
 
 # Define the base URL for x-rates website
 X_RATES_ENDPOINT = "https://www.x-rates.com/calculator/"
-

@@ -1,7 +1,6 @@
 import requests
 from datetime import datetime
 import time
-from pathlib import Path
 from constants import STOCK_DATA_DIR, YAHOO_FINANCE_API_ENDPOINT, HEADERS
 
 
