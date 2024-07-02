@@ -8,7 +8,6 @@ MarketMapper is a Python-based tool consisting of two scripts: one for downloadi
 - **Currency Converter**: Scrapes currency conversion rates from x-rates website using BeautifulSoup.
 
 ## Technologies Used
-- **Python**: Programming language used for scripting.
 - **Selenium**: Web automation tool used for interacting with `Yahoo Finance` website.
 - **BeautifulSoup**: Python library for parsing HTML and extracting data from `x-rates` website.
 - **requests**: Python library for making HTTP requests, used for fetching data from `x-rates` website.
