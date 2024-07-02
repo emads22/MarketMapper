@@ -133,9 +133,12 @@ def download_stock_data(ticker_symbol, start_epoch, end_epoch):
         # If the request is successful, proceed with file handling
         stock_data = response.content
         # Save the stock data to a CSV file
+        # Define the output filepath with unique identifier using time.time()
+        output_filepath = STOCK_DATA_DIR / f'{ticker_symbol}_stock_data_{int(time.time())}.csv'
         # 'wb' mode is used because it covers both binary and non-binary files, ensuring data integrity and versatile file handling.
-        with open(STOCK_DATA_DIR / f'{ticker_symbol}_stock_data.csv', 'wb') as file:
+        with open(output_filepath, 'wb') as file:
             file.write(stock_data)
+            return output_filepath  # return filepath
 
     except requests.exceptions.RequestException as e:
         # If a request-related error occurs, raise it
@@ -161,9 +164,9 @@ def main():
         # Convert dates to epoch
         start_epoch, end_epoch = convert_dates_to_epoch(start_date, end_date)
         # Download stock data
-        download_stock_data(ticker_symbol, start_epoch, end_epoch)
+        downloaded = download_stock_data(ticker_symbol, start_epoch, end_epoch)
         # Display success message
-        print("\n--- Stock data downloaded successfully! ---\n")
+        print(f'\n--- Stock data downloaded successfully! Check it at: "{str(downloaded)}" ---\n')
 
     except Exception as e:
         # Handle any unexpected errors
