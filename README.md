@@ -22,11 +22,13 @@ MarketMapper is a Python-based tool consisting of two scripts: one for downloadi
 5. Run the script using `python download_stock_data.py` for stock data downloader or `python scrape_currency_rate.py` for currency converter.
 
 ## Usage
-1. Run the stock data downloader script using `python download_stock_data.py`.
+1. Run the main script using `python main.py` to select and run either the `stock data downloader` or the `currency converter` script.
+   - You will be prompted to enter the number corresponding to your choice.
+2. Run the stock data downloader script using `python download_stock_data.py`.
    - You will be prompted to enter the stock `ticker symbol`, `start date`, and `end date`.
-2. Run the currency converter script using `python scrape_currency_rate.py`.
+3. Run the currency converter script using `python scrape_currency_rate.py`.
    - You will be prompted to enter the currency symbols you want to convert from and to.
-3. Follow the instructions provided by each script to complete the respective tasks.
+4. Follow the instructions provided by each script to complete the respective tasks.
 
 ## Contributing
 Contributions are welcome! Here are some ways you can contribute to the project:
